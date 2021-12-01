@@ -49,13 +49,13 @@ Produces a CO Depletion map from a 2D mass surface density map produced with CO 
 ## Plotting
 The following will introduce what each main feature of the plotter code does 
 
-### Spectrum
+### Spectrum:
 Produces a spectrum from a 3D cube of data with km/s on the x-axis
 
-### Map_Plot
+### Map_Plot:
 Produces a plot of any 2D map with the option to add a colorbar, contours, and more. 
 
-### Interactive
+### Interactive:
 Produces an interactive map of 2D data with a contour plot overlay. The user is able to vary the minimum and maximum value on their contour levels using 'Cont Max' and 'Cont Min' as well as the vmin and vmax of their base image using 'Mean' and 'Scale'.
 
 
