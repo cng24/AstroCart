@@ -13,7 +13,7 @@ Produces a 2D RMS map, given the 3D cube of data
 
 ### Excitation Temperature Map: 
 Produces a 3D cube of excitation temperature, taking values only over 3rms at each position-position-velocity (or frequency) element. This excitation temperature mapper requires the user to have two different transitions of the same CO isotopologue, e.g. 13CO(J=1-0) and 13CO(J=2-1). 
-- N.B. the user is required to have the following variables defined before running excitation temperature and column density map
+- N.B. the user is required to have the following variables defined before running excitation temperature and column density map. These can be either googled or found at [Spatalogue](https://splatalogue.online//) 
    - B = rotational constant for the CO isotopologue
    - h = planck's constant
    - k = boltzmann constant
