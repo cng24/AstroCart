@@ -16,11 +16,6 @@ class plotter():
         ----------
         cube_path: string
             the path to your 3D cube of data
-            
-        Returns
-        -------
-        print(self.cube): spectral cube
-            returns the 
         
         '''
         cube = fits.open(cube_path)
@@ -29,7 +24,7 @@ class plotter():
         header = self.cube.header
         header1 = self.cube[0].header
         self.wcs_cube = WCS(header1)
-        return print(self.cube)
+        print(self.cube)
         
     def spectrum(self):
         '''
