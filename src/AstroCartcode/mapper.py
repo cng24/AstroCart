@@ -9,6 +9,8 @@ from astropy.utils import data
 import os
 from reproject import reproject_interp
 
+__all__ = ['Qrot', 'Ntot', 'Ntot_t', 'tau', 'RMS_Map' 'Pixel_Regird', 'Mappers']
+
 def Qrot(T):
     '''
     The rotational partition function, which will be called in the column density function
@@ -59,24 +61,6 @@ def Ntot(freq, Tex, Aul, gup, Elow, area):
     Ntot*1e5: float
         Column Density in cm^2
     '''
-    #s= time.time()
-    #print(f'Starting F1 at {s}')
-    
-    #f1 = 8.*np.pi*freq**3/(Aul*gup*c**3)
-    #f2 = (h*freq)/k
-    #f3 = 1./((1./(np.exp(f2/Tex)-1))-(1./(np.exp(f2/Tbkg))))
-    #f4 = 1.-np.exp(-f2/Tex)
-    #f5 = np.exp(Elow/Tex)
-    
-    #s5 = time.time() - s 
-    #const = (f1/f2)*f3*f5*area/f4 #Qrot(Tex)
-    #print(f'all steps before Qrot {s5}')
-
-    #Ntot = (f1/f2)*f3*f5*Qrot(Tex)*area/f4
-    
-    #s6 = time.time() - s5
-    #print(f'Qrot took {s6}')
-
     f1 = 8.*np.pi*freq**3/(Aul*gup*c**3)
     f2 = (h*freq)/k
     f3 = 1./((1./(np.exp(f2/Tex)-1))-(1./(np.exp(f2/Tbkg))))

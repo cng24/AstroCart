@@ -7,7 +7,9 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable, axes_size
 from astropy.io import fits 
 import os
 
-class plotter():
+__all__ = ['Plotter', 'Load_fits', 'Interactive']
+
+class Plotter():
     def __init__(self, cube_path):
         '''
         Initializes the class and inputs the 3D cube header that you wish to plot
@@ -131,7 +133,7 @@ class plotter():
         return fig, ax
 
 
-def load_fits(loc, ext=0):
+def Load_fits(loc, ext=0):
     '''
     A function that opens and reads a fits file. It requires one string input, 
     which is the path to the fits file, and an optional integer input, which can be used 
@@ -158,7 +160,7 @@ def load_fits(loc, ext=0):
 
 
 
-def interactive(base_path, cont_path):
+def Interactive(base_path, cont_path):
     '''
     generates an interactive plot of the contours and vmin & vmax
 
