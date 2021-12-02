@@ -436,7 +436,7 @@ class Mappers():
         self.NcoMap2d = NcoMap2d
         return self.TexMap2d, self.NcoMap2d
     
-    def sigma_map(self, NCOMap2d):
+    def sigma_map(self, NCOMap2d, C18O=False):
         '''
         Makes the mass surface density map 
         
@@ -444,6 +444,9 @@ class Mappers():
         ----------
         NCOMap2d: array-like
             the 2D column density map, generated in previous steps
+        C18O: Boolean
+            if False, the code will run for 13CO mass surface density
+            if True, the code will run for C18O mass surface density
             
         Returns
         -------
@@ -454,9 +457,12 @@ class Mappers():
             for yy in range(0,self.Ysh):
                 if NCOMap2d[yy,xx] <= 0:
                     NCOMap2d[yy,xx] = 'nan'
-            
-        self.sigma = (1.24*10**-2) * NCOMap2d / 10**16 ##13CO 
-        return self.sigma
+        if C18O == False:
+            self.sigma = (1.24*10**-2) * NCOMap2d / 10**16 ##13CO 
+            return self.sigma
+        else: 
+            self.sigma = (7.652*10**-2) * NCOMap2d / (10**16) ##C18O
+            return self.sigma
     
     def CODep_Map(self, sigma, known_sigma_path):
         '''

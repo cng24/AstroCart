@@ -16,6 +16,11 @@ class plotter():
         ----------
         cube_path: string
             the path to your 3D cube of data
+            
+        Returns
+        -------
+        print(self.cube): spectral cube
+            returns the 
         
         '''
         cube = fits.open(cube_path)
@@ -24,7 +29,7 @@ class plotter():
         header = self.cube.header
         header1 = self.cube[0].header
         self.wcs_cube = WCS(header1)
-        print(self.cube)
+        return print(self.cube)
         
     def spectrum(self):
         '''
@@ -187,8 +192,8 @@ def interactive(base_path, cont_path):
 
     axmax = divider.append_axes("bottom", size = width, pad = pad + 4*width) # add axes to the bottom
     axmin= divider.append_axes("bottom", size = width, pad = pad + 2.5*width) #add axes to the bottom
-    smax = Slider(axmax, 'Cont Max', 0, 3*np.nanmean(data_cont), 50, color = 'blue') #3*np.mean(data_cont     #slider properties
-    smin = Slider(axmin, 'Cont Min', 0, 0.33*np.nanmean(data_cont), 0, color = 'blue') #0.33*np.mean(data_cont)
+    smax = Slider(axmax, 'Cont Max', 0, 3*np.nanmean(data_cont), 50, color = 'blue') 
+    smin = Slider(axmin, 'Cont Min', 0, 0.33*np.nanmean(data_cont), 0, color = 'blue')
 
 
     mean_ax = divider.append_axes("right", size = width, pad = pad) # add axes to the right
