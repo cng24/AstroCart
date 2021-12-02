@@ -10,5 +10,5 @@ setuptools.setup(
     #packages=["exampy","exampy/plotting"]
     packages=setuptools.find_packages(include=['AstroCart','AstroCart.*']),
     python_requires='>=3',
-    install_requires=["numpy", "matplotlib", "astropy", "spectral_cube", "reproject.reproject_interp", "mpl_toolkits.axes_grid1"]
+    install_requires=["numpy", "matplotlib", "astropy", "spectral_cube", "reproject", "mpl_toolkits"]
 )
