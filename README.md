@@ -4,7 +4,7 @@ Astrophysical Cartography (AstroCart) is a package that can produce RMS, excitat
 ## Installation
 - Git Clone this repository
 - navigate to the directory where you wish to store AstroCart
-- pip install -e in terminal 
+- pip install -e. in terminal 
 
 ## Mapping
 The following will introduce what each main feature of the mapper code does 
