@@ -9,7 +9,7 @@ setuptools.setup(
     description="A map generating and plotting application for CO isotopologue data, specifically 3D cubes",
     #packages=setuptools.find_packages(where="src"),
     #packages=["exampy","exampy/plotting"]
-    packages=setuptools.find_packages(include=['AstroCart','AstroCart/*']),
+    packages=setuptools.find_packages(include=['astrocart','astrocart/*']),
     package_dir={"": "src"},
     python_requires='>=3',
     install_requires=["numpy", "matplotlib", "astropy", "spectral_cube", "reproject"]
