@@ -6,6 +6,7 @@ from matplotlib.widgets import Slider
 from astropy.wcs import WCS
 from mpl_toolkits.axes_grid1 import make_axes_locatable, axes_size
 from astropy.io import fits 
+import astropy.units as u
 import os
 
 __all__ = ['Plotter', 'Load_fits', 'Interactive']
@@ -173,9 +174,9 @@ def Interactive(base_path, cont_path):
         path to the 2D fits image that will be used to produce contours 
 
     '''
-    header, data = load_fits(base_path) ##user input
+    header, data = Load_fits(base_path) ##user input
 
-    header_cont, data_cont = load_fits(cont_path)
+    header_cont, data_cont = Load_fits(cont_path)
     wcs_contour = WCS(header_cont)
 
 
