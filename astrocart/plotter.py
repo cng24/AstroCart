@@ -6,6 +6,7 @@ from matplotlib.widgets import Slider
 from astropy.wcs import WCS
 from mpl_toolkits.axes_grid1 import make_axes_locatable, axes_size
 from astropy.io import fits 
+import astropy.units as u
 import os
 
 __all__ = ['Plotter', 'Load_fits', 'Interactive']
