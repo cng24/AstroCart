@@ -9,6 +9,9 @@ from astropy.utils import data
 import os
 from reproject import reproject_interp
 
+from constants import *
+
+
 __all__ = ['Qrot', 'Ntot', 'Ntot_t', 'tau', 'RMS_Map', 'Pixel_Regrid', 'Mappers']
 
 def Qrot(T):
