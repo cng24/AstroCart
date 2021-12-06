@@ -62,6 +62,7 @@ Produces a plot of any 2D map with the option to add a colorbar, contours, and m
 
 ### Interactive:
 Produces an interactive map of 2D data with a contour plot overlay. The user is able to vary the minimum and maximum value on their contour levels using 'Cont Max' and 'Cont Min' as well as the vmin and vmax of their base image using 'Mean' and 'Scale'.
+- N.B. The interactive component of this map will not work in Jupyter Lab
 
 
 
