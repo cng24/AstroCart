@@ -123,15 +123,15 @@ fig, ax = plots.spectrum()
 #### Map_Plot
 Produces a plot of any 2D map with the option to add a colorbar, contours, and more. 
 ```ruby
-fig, ax = plots.map_plot(Tex2, vmin=5, vmax=10) #no contours
+fig, ax = plots.map_plot(Tex2, vmin=5, vmax=10) #change vmin and vamx depending on your dataset
 ```
 
 if the user would like to add contours, then the add...
 ```ruby
 cont = 'pathto_image_thatwillbe_contours.fits'
 
-levels=np.linspace(60, 120, 5)
-fig, ax = plots.map_plot(Tex2, contour_path=cont, cont_levels=levels, vmin=5, vmax=10) #no contours
+levels = np.linspace(60, 120, 5) #change depending on your data set
+fig, ax = plots.map_plot(Tex2, contour_path=cont, cont_levels=levels)
 ```
 
 ### Interactive
